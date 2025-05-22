@@ -1,19 +1,18 @@
--- 0. Limpa qualquer execução anterior
 DROP DATABASE IF EXISTS crm_leads;
 
--- 1. Cria o banco
+
 CREATE DATABASE crm_leads
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 USE crm_leads;
 
--- 2. Remove tabelas antigas, se existirem
+
 DROP TABLE IF EXISTS `interacao`;
 DROP TABLE IF EXISTS `lead`;
 DROP TABLE IF EXISTS `usuario`;
 DROP TABLE IF EXISTS `estagio`;
 
--- 3. Tabela de estágios
+
 CREATE TABLE estagio (
   estagio_id   SMALLINT     NOT NULL,
   estagio_nome VARCHAR(50)  NOT NULL,
@@ -21,7 +20,7 @@ CREATE TABLE estagio (
   UNIQUE KEY (estagio_nome)
 ) ENGINE=InnoDB;
 
--- 4. Tabela de usuários
+
 CREATE TABLE usuario (
   usuario_id     INT          NOT NULL AUTO_INCREMENT,
   usuario_nome   VARCHAR(100) NOT NULL,
@@ -31,7 +30,7 @@ CREATE TABLE usuario (
   UNIQUE KEY (usuario_email)
 ) ENGINE=InnoDB;
 
--- 5. Tabela de leads
+
 CREATE TABLE `lead` (
   `lead_id`            INT           NOT NULL AUTO_INCREMENT,
   `lead_nome`          VARCHAR(100)  NOT NULL,
@@ -49,7 +48,7 @@ CREATE TABLE `lead` (
   CONSTRAINT fk_lead_usuario FOREIGN KEY (`lead_usuario_id`) REFERENCES `usuario`(`usuario_id`)
 ) ENGINE=InnoDB;
 
--- 6. Tabela de interações (corrigida)
+
 CREATE TABLE interacao (
   interacao_id          INT         NOT NULL AUTO_INCREMENT,
   interacao_lead_id     INT         NOT NULL,
