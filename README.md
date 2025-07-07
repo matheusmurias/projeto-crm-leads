@@ -1,33 +1,41 @@
-# Projeto CRM de Leads
+Projeto CRM de Leads – Entrega Final
 
-Repositório contendo:
+Estrutura de pastas
+docs/
+  EntregaFinal+Murias.pdf
+  Entrega2+Murias.pdf
+  Ideia+Murias.pdf
+  er_diagrama.png
+sql/
+  create_crm_leads.sql
+  create_objects.sql
+  insert_data.sql
+README.md
+Conteúdo
+docs/Ideia+Murias.pdf
+– Documentação inicial: introdução, objetivo, modelo de negócio, diagrama ER.
 
-- **`sql/create_crm_leads.sql`** – Script DDL original para criação de tabelas  
-- **`sql/create_objects.sql`** – Criação de Views, Functions, Stored Procedures e Triggers  
-- **`sql/insert_data.sql`** – População inicial de dados de teste  
-- **`docs/er_diagrama.png`** – Diagrama Entidade-Relacionamento  
-- **`docs/Ideia+Murias.pdf`** – Documentação da Entrega 1  
-- **`docs/Entrega2+Murias.pdf`** – Documentação da Entrega 2  
+docs/Entrega2+Murias.pdf
+– Segunda entrega: lista e descrição de Views, Functions, Stored Procedures e Triggers.
 
-## Links “raw” dos scripts
+docs/EntregaFinal+Murias.pdf
+– Entrega final: consolidação de todo o projeto e relatório analítico via Google Sheets.
 
-- Create tables (DDL):  
-  https://raw.githubusercontent.com/matheusmurias/projeto-crm-leads/main/sql/create_crm_leads.sql
-- Create objects:  
-  https://raw.githubusercontent.com/matheusmurias/projeto-crm-leads/main/sql/create_objects.sql
-- Insert data:  
-  https://raw.githubusercontent.com/matheusmurias/projeto-crm-leads/main/sql/insert_data.sql
+docs/er_diagrama.png
+– Diagrama Entidade–Relacionamento.
 
-## Como executar
+sql/create_crm_leads.sql
+– Criação do banco e tabelas.
 
-1. **Criar o schema e as tabelas**  
-   No MySQL Workbench, abra `sql/create_crm_leads.sql` e clique em ⚡ Execute All.  
-2. **Criar Views, Functions, SPs e Triggers**  
-   Abra `sql/create_objects.sql` e execute tudo de uma vez.  
-3. **Popular dados de teste**  
-   Abra `sql/insert_data.sql` e execute; ou use “Table Data Import Wizard” para CSVs, se preferir.  
-4. **Verificar resultados**  
-   - Em **Schemas → crm_leads → Views** confira as Views criadas.  
-   - Em **Schemas → crm_leads → Functions** veja as funções.  
-   - Em **Schemas → crm_leads → Stored Procedures** e **Triggers** confira os objetos criados.  
-   - Rode alguns `SELECT * FROM view_leads_por_estagio;` ou `CALL sp_gerar_relatorio_pipeline();` para validar.  
+sql/create_objects.sql
+– Criação de Views, Functions, Procedures e Triggers.
+
+sql/insert_data.sql
+– Limpeza e inserção de dados de teste.
+
+Como executar
+No MySQL Workbench, selecione o schema crm_leads.
+
+Abra e execute, em ordem, create_crm_leads.sql, create_objects.sql e insert_data.sql.
+
+Verifique em Schemas → crm_leads: Tables, Views, Stored Procedures e Functions.
