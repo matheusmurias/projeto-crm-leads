@@ -13,7 +13,3 @@ Este repositório reúne:
 - `create_objects.sql`      — Views, Functions, Procedures, Triggers  
 - `insert_data.sql`         — População de dados de teste  
 
-## Como executar
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/matheusmurias/Entrega-Final.git
